@@ -34,9 +34,15 @@ mpris_properties get_mpris_player_status(kiss_mpris_options *options) {
 
         if (strncmp(player.properties.playback_status,
                     MPRIS_METADATA_VALUE_PLAYING, 8) == 0) {
-            if(options->status == MPRIS_PLAYER_ANY_PLAYING)
-                skip = false;
-            else playing = true;
+            switch(options->status) {
+                case MPRIS_PLAYER_ANY_PLAYING:
+                case MPRIS_PLAYER_ANY:
+                    skip = false;
+                    break;
+                default:
+                    playing = true;
+                    break;
+            }
         }
 
         if ((options->status == MPRIS_PLAYER_ANY) &&
