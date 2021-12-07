@@ -24,8 +24,7 @@ mpris_properties get_mpris_player_status(kiss_mpris_options *options) {
     mpris_player players[MAX_PLAYERS] = {0};
     int found = load_players(conn, players);
 
-    bool found_player = true;
-    mpris_properties returned_data;
+    mpris_properties returned_data = { 0 };
 
     for (int i = 0; i < found; i++) {
         bool skip = true;
