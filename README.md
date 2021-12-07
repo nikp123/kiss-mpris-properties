@@ -24,6 +24,8 @@ In it, you'll find ``player_names`` and ``player_count`` which are basically a
 string array and a counter that specifies the names of the players you want to
 **specifically** target for media data, however this is completely optional as you
 can leave ``player_count`` set to 0 for it to find the first available player.
+An example for that would be ``Spotify`` for the Spotify application, you'll have
+to research these on your own unfortunately.
 
 However, the status property does offer you a bit more flexibility, where you can
 specify one of three options: ``MPRIS_PLAYER_MUST_BE_PLAYING``,
