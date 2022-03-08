@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.0.2)
 project(KISS_MPRIS_PROPERTIES C)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
